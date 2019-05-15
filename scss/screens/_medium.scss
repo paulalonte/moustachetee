@@ -1,0 +1,22 @@
+@media only screen and (min-width: 561px) {
+	.item-detail-container {
+		section {
+			padding: 0 20px;
+			@include flexWrap(nowrap);
+			@include flexboxBasis(50%);
+		}
+	}
+
+	%margin-bottom-cart-details {
+		margin-bottom: 10px;
+	}
+
+	.cart-details-container {
+	   	border: 1px solid $secondaryColor;
+	    width: 350px;
+	    padding: 20px;
+	    position: absolute;
+	    background: #fff;
+	    right: 40px;
+	}
+}

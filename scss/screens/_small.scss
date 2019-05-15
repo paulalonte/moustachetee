@@ -1,0 +1,200 @@
+* {
+	padding: 0;
+	margin: 0;
+	@include borderBox();
+}
+
+html, body {
+	width: 100%;
+	font-family: 'Roboto', sans-serif;
+	position: relative;
+}
+
+nav {
+	margin-top: 10px;
+	padding: 0 40px;
+    @include displayFlexbox();
+    -webkit-box-pack: end;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
+  	background-color: $headerBackgroundColor;
+
+    a {
+    	text-decoration: none;
+    	color: $secondaryColor;
+    	font-size: 0.8em;
+	    height: 32px;
+	    padding: 8px 10px;
+	    border: 1px solid $headerBackgroundColor;
+    }
+}
+
+.hovercart {
+	border: 1px solid #888;
+    border-bottom: 0;
+    background: #fff;
+    z-index: 99999;
+}
+
+%margin-bottom-cart-details {
+	margin-bottom: 10px;
+}
+
+%display-none {
+	display: none;
+}
+
+.cart-details-container {
+   	border: 1px solid $secondaryColor;
+    width: 100%;
+    padding: 20px;
+    position: absolute;
+    background: #fff;
+    margin-top: -1px;
+
+    .add-to-cart-item {
+    	@include displayFlexbox();
+
+    	&:not(:last-child) {
+    		margin-bottom: 20px;
+    	}
+
+    	.image-cart {
+	    	width: 136px;
+	    	img {
+			    width: 100%;
+			}
+	    }
+
+		.cart-details {
+			h3 {
+				font-weight: $fontMedium;
+				@extend %margin-bottom-cart-details;
+			}
+
+			p {
+				font-size: 0.8em;
+				@extend %margin-bottom-cart-details;
+			}
+
+			.price-cart {
+				font-weight: $fontBold;
+			}
+		}
+    }
+
+	display: none;
+}
+
+
+
+h1 {
+	padding: 0;
+	margin: 0;
+}
+
+.item-detail-container {
+	@include borderBox();
+	@include displayFlexbox();
+	@include flexWrap(wrap);
+	margin: 20px 40px;
+}
+
+.item-detail-container {
+	section {
+		padding: 0 20px;
+		@include borderBox();
+		@include flexboxBasis(100%);
+		@include addStandardMarginAlignment();
+	}
+
+	img {
+		width: 100%;
+	}
+}
+
+
+/* ITEM DETAILS */
+.item-details {
+	h1 {
+		font-weight: $fontMedium;
+		color: $primaryColor;
+		letter-spacing: -1px;
+		@include addStandardMarginAlignment();
+	}
+
+	.price {
+		font-weight: $fontMedium;
+		color: $primaryColor;
+		font-weight: $fontBold;
+		@include addStandardMarginAlignment();
+		border-top: 1px solid lighten($secondaryColor, 30%);
+	    border-bottom: 1px solid lighten($secondaryColor, 30%);
+	    padding: 10px;
+	}
+
+	.description {
+		color: $secondaryColor;
+		font-weight: $fontLight;
+		letter-spacing: 1px;
+	    font-size: 0.75em;
+	    line-height: 20px;
+	    @include addStandardMarginAlignment();
+	}
+
+	.sizes {
+		@include addStandardMarginAlignment();
+
+		p {
+			font-size: 0.8em;
+			letter-spacing: 1px;
+			color: $secondaryColor;
+			margin-bottom: 8px;
+		}
+	}
+
+}
+
+/*CSS Styles can be used anywhere*/
+.required {
+	color: $starRequired;
+	font-weight: $fontBold;
+}
+
+.size-label {
+	color: $primaryColor;
+	margin-left: 5px;
+	font-weight: $fontBold;
+}
+
+.button-sizes {
+	@include buttonPrimaryStyle($secondaryColor, 10px, 15px, $fontLight, 1px);
+}
+
+.button-add-to-cart {
+	@include buttonPrimaryStyle($primaryColor, 10px, 15px, $fontBold, 2px);
+	@include transition(0.2s);
+
+	&:hover {
+		background-color: $primaryColor;
+		color: #fff;
+	}
+}
+
+.displayCartTee {
+	display: flex !important;
+}
+
+/* Style when button size selected */
+.size-selected {
+    border: 2px solid #222;
+    color: #222;
+}
+
+.error {
+	color: $starRequired;
+	margin-top: 10px;
+	font-size: 0.8em;
+	display: none;
+}
+

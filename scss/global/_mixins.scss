@@ -1,0 +1,41 @@
+@mixin displayFlexbox() {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+@mixin addStandardMarginAlignment() {
+	margin-bottom: $standardMarginDetails;
+}
+
+@mixin buttonPrimaryStyle($fontColor, $paddingTop, $paddingLeftRight, $fontWeight, $borderWidth) {
+    text-decoration: none;
+    color: $fontColor;
+    border: $borderWidth solid $fontColor;
+    padding: $paddingTop $paddingLeftRight;
+    display: inline-block;
+    font-weight: $fontWeight;
+    background-color: #fff;
+}
+
+@mixin flexboxBasis($percent) {
+	-ms-flex-preferred-size: $percent;
+	flex-basis: $percent;
+}
+
+@mixin flexWrap($val) {
+	-ms-flex-wrap: $val;
+	flex-wrap: $val;
+}
+
+
+@mixin borderBox() {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+@mixin transition($duration) {
+	-webkit-transition: background-color $duration ease, background-color $duration ease;
+	-o-transition: background-color duration ease, background-color $duration ease;
+	transition: background-color duration ease, background-color $duration ease;
+}

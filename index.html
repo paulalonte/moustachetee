@@ -5,47 +5,87 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Moustache Tee</title>
 
-	<style>
-		.item-detail-container {
-			display: -webkit-box;
-			display: -ms-flexbox;
-			display: flex;
-    		margin: 0 40px;
-		}
+	<!--css fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,900" rel="stylesheet">
+	
+	<!--link to main CSS-->
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
 
-		section.image-detail-container {
-		    padding: 22px 50px;
-		}
-
-	</style>
 </head>
 <body>
 
 <nav>
-	<a href="">My Cart (<span class="item-count">2</span>)</a>
+	<a href="#" id="myCart">My Cart (<span class="nav-item-cart-count">0</span>)</a>
 </nav>
+<div class="cart-details-container">
+	<div class="add-to-cart-item small-tee">
+		<div class="image-cart">
+			<img src="images/classic-tee.jpg" alt="white shirt v neckline">
+		</div>
+		
+		<div class="cart-details">
+			<h3 class="label-cart">Classic Tee</h3>
+			<p><span class="item-count">1</span>x <span class="price-cart">$75.00</span></p>
+			<p>Size: <span class="size-cart">S</span></p>
+		</div>
+	</div>
+
+	<div class="add-to-cart-item medium-tee">
+		<div class="image-cart">
+			<img src="images/classic-tee.jpg" alt="white shirt v neckline">
+		</div>
+		
+		<div class="cart-details">
+			<h3 class="label-cart">Classic Tee</h3>
+			<p><span class="item-count">1</span>x <span class="price-cart">$75.00</span></p>
+			<p>Size: <span class="size-cart">M</span></p>
+		</div>
+	</div>
+
+	<div class="add-to-cart-item large-tee">
+		<div class="image-cart">
+			<img src="images/classic-tee.jpg" alt="white shirt v neckline">
+		</div>
+		
+		<div class="cart-details">
+			<h3 class="label-cart">Classic Tee</h3>
+			<p><span class="item-count">1</span>x <span class="price-cart">$75.00</span></p>
+			<p>Size: <span class="size-cart">L</span></p>
+		</div>
+	</div>
+</div>
 
 <div class="item-detail-container">
+	<!--section 1 for image-->
 	<section class="image-detail-container">
 		<div>
 			<img src="images/classic-tee.jpg" alt="white shirt v neckline">	
 		</div>
 	</section>
 
+	<!--section 2 for the item details (description/size)-->
 	<section class="item-details">
 		<h1>Classic Tea</h1>
-		<p>$75.00</p>
-		<p>
+		<p class="price">$75.00</p>
+		<p class="description">
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras bibendum sollicitudin tellus, eget convallis risus iaculis ut. Quisque tellus quam, efficitur in lobortis et, viverra vitae ante. Nunc lobortis ex vel urna pulvinar ultricies. Maecenas ex est, varius vitae sapien at, lacinia convallis felis. Proin commodo dui justo, non imperdiet elit vehicula in.
 		</p>
 		<div class="sizes">
-			<a href="" class="button-size">S</a>
-			<a href="" class="button-size">M</a>
-			<a href="" class="button-size">L</a>
+			<p>SIZE<span class="required">*</span><span class="size-label"></span></p>
+			<button class="button-sizes" value="small">S</button>
+			<button class="button-sizes" value="medium">M</button>
+			<button class="button-sizes" value="large">L</button>
 		</div>
-		<a href="">ADD TO CART</a>
+		<button class="button-add-to-cart">ADD TO CART</button>
+		<p class="error">No Size Selected</p>
 	</section>
 </div>
+
+
+<!--JS CODES/LIBRARIES-->	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!--link to main JS-->
+<script src="js/main.js"></script>
 
 </body>
 </html>
